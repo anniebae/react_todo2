@@ -28,14 +28,13 @@ class TodosListItem extends Component {
       return(
         <td>
           <form onSubmit={this.onSaveClick.bind(this)}>
-            <input type="text" defaultValue={task} ref="editInput" />
+            <input className="inputItem" type="text" defaultValue={task} ref="editInput" autofocus />
           </form>
         </td>
       )
     }
 
     return (
-      // <td style={taskStyle}
         <td style={taskStyle} 
             onClick={this.props.toggleTask.bind(this, task)}
         >

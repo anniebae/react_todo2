@@ -39983,20 +39983,17 @@ var TodosListItem = function (_Component) {
           _react2.default.createElement(
             'form',
             { onSubmit: this.onSaveClick.bind(this) },
-            _react2.default.createElement('input', { type: 'text', defaultValue: task, ref: 'editInput' })
+            _react2.default.createElement('input', { className: 'inputItem', type: 'text', defaultValue: task, ref: 'editInput', autofocus: true })
           )
         );
       }
 
-      return (
-        // <td style={taskStyle}
-        _react2.default.createElement(
-          'td',
-          { style: taskStyle,
-            onClick: this.props.toggleTask.bind(this, task)
-          },
-          task
-        )
+      return _react2.default.createElement(
+        'td',
+        { style: taskStyle,
+          onClick: this.props.toggleTask.bind(this, task)
+        },
+        task
       );
     }
   }, {
@@ -40111,7 +40108,7 @@ exports = module.exports = __webpack_require__(193)(undefined);
 
 
 // module
-exports.push([module.i, "button {\n    background: transparent;\n    border: none;\n}\n.listIcon {\n    width: 20px;\n    filter: invert(100%);\n\n}\n\n.listItem {\n    background: rgb(106,54,206); /* Old browsers */\n    background: -moz-linear-gradient(left, rgba(106,54,206,1) 0%, rgba(68,208,219,1) 100%); /* FF3.6-15 */\n    background: -webkit-linear-gradient(left, rgba(106,54,206,1) 0%,rgba(68,208,219,1) 100%); /* Chrome10-25,Safari5.1-6 */\n    background: linear-gradient(to right, rgba(106,54,206,1) 0%,rgba(68,208,219,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a36ce', endColorstr='#44d0db',GradientType=1 ); /* IE6-9 */\n    color: #fff;\n    border-radius: 5px;\n    display: block;\n    margin-bottom: 3px;\n}\n\n.listItem > td {\n    padding: 5px;\n}", ""]);
+exports.push([module.i, "button {\n    background: transparent;\n    border: none;\n}\n.listIcon {\n    width: 20px;\n    filter: invert(100%);\n\n}\n\n.inputItem {\n    border: none;\n    color: white;\n    font-size: 16px;\n    font-weight: 100;\n    width: 100%;\n    height: 25px;\n    background: rgba(255,255,255,0.5);\n}\n\n.listItem {\n    background: rgb(106,54,206); /* Old browsers */\n    background: -moz-linear-gradient(left, rgba(106,54,206,1) 0%, rgba(68,208,219,1) 100%); /* FF3.6-15 */\n    background: -webkit-linear-gradient(left, rgba(106,54,206,1) 0%,rgba(68,208,219,1) 100%); /* Chrome10-25,Safari5.1-6 */\n    background: linear-gradient(to right, rgba(106,54,206,1) 0%,rgba(68,208,219,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a36ce', endColorstr='#44d0db',GradientType=1 ); /* IE6-9 */\n    color: #fff;\n    margin-bottom: 3px;\n}\n\n.listItem > td {\n    padding: 5px;\n}", ""]);
 
 // exports
 
