@@ -1,4 +1,10 @@
 import React, { Component } from 'react'
+import css from './styles.css'
+
+import editIcon from '../../img/icon-edit.png'
+import deleteIcon from '../../img/icon-delete.png'
+import saveIcon from '../../img/icon-save.png'
+import cancelIcon from '../../img/icon-cancel.png'
 
 class TodosListItem extends Component {
   constructor(props) {
@@ -14,8 +20,8 @@ class TodosListItem extends Component {
 
 
     const taskStyle = {
-      color: isCompleted ? 'green' : 'red',
-      cursor: 'pointer'
+        textDecoration: isCompleted ? 'line-through' : 'none',
+        cursor: 'pointer'
     }
 
     if (this.state.isEditing) {
@@ -29,11 +35,12 @@ class TodosListItem extends Component {
     }
 
     return (
-      <td style={taskStyle}
-          onClick={this.props.toggleTask.bind(this, task)}
-      >
-        {task}
-      </td>
+      // <td style={taskStyle}
+        <td style={taskStyle} 
+            onClick={this.props.toggleTask.bind(this, task)}
+        >
+            {task}
+        </td>
     )
   }
 
@@ -41,23 +48,31 @@ class TodosListItem extends Component {
     if (this.state.isEditing) {
       return (
         <td>
-          <button onClick={this.onSaveClick.bind(this)}>Save</button>
-          <button onClick={this.onCancelClick.bind(this)}>Cancel</button>
+          <button onClick={this.onSaveClick.bind(this)}>
+            <img src={saveIcon} className="listIcon" alt=""/>
+          </button>
+          <button onClick={this.onCancelClick.bind(this)}>
+            <img src={cancelIcon} className="listIcon" alt=""/>
+          </button>
         </td>
       )
     }
 
     return (
-      <td>
-        <button onClick={this.onEditClick.bind(this)}>Edit</button>
-        <button onClick={this.props.deleteTask.bind(this, this.props.task)}>Delete</button>
-      </td>
+        <td>
+            <button onClick={this.onEditClick.bind(this)}>
+                <img src={editIcon} className="listIcon" alt=""/>
+            </button>
+            <button onClick={this.props.deleteTask.bind(this, this.props.task)}>
+                <img src={deleteIcon} className="listIcon" alt=""/>
+            </button>
+        </td>
     )
   }
 
   render() {
     return(
-      <tr>
+      <tr className="listItem">
         {this.renderTaskSection()}
         {this.renderActionSection()}
       </tr>

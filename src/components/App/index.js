@@ -1,16 +1,19 @@
 import React, { Component } from 'react'
-import CreateTodo from './create-todo'
-import TodosList from './todos-list'
+import ReactDOM from 'react-dom'
+import CreateTodo from '../CreateTodo/'
+import TodosList from '../TodosList/'
+
+import css from './styles.css'
 
 
 const todos = [
 {
-  task: 'make React tutorial',
+  task: 'learn React',
   isCompleted: false
 },
 {
-  task: 'eat dinner',
-  isCompleted: true
+  task: 'make stashboard',
+  isCompleted: false
 }
 ];
 
@@ -26,14 +29,16 @@ class App extends Component {
   render() {
     return(
       <div>
-        <h1>React Todos App</h1>
-        <CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)} />
-        <TodosList 
-          todos={this.state.todos} 
-          toggleTask={this.toggleTask.bind(this)}
-          saveTask={this.saveTask.bind(this)}
-          deleteTask={this.deleteTask.bind(this)}
-        />
+        <h1>Stashboard</h1>
+        <div>
+            <CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)} />
+            <TodosList 
+              todos={this.state.todos} 
+              toggleTask={this.toggleTask.bind(this)}
+              saveTask={this.saveTask.bind(this)}
+              deleteTask={this.deleteTask.bind(this)}
+            />
+        </div>
       </div>
     )
   }
@@ -65,4 +70,6 @@ class App extends Component {
 }
 
 
-export default App
+// export default App
+var app = document.getElementById('app')
+ReactDOM.render(<App />, app)

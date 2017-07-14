@@ -1,7 +1,9 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
-import TodosListHeader from './todos-list-header'
-import TodosListItem from './todos-list-item'
+import TodosListHeader from '../TodosListHeader/'
+import TodosListItem from '../TodosListItem/'
+
+import css from './styles.css'
 
 
 class TodosList extends Component {

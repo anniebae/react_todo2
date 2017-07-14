@@ -1,0 +1,25 @@
+button {
+    background: transparent;
+    border: none;
+}
+.listIcon {
+    width: 20px;
+    filter: invert(100%);
+
+}
+
+.listItem {
+    background: rgb(106,54,206); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(106,54,206,1) 0%, rgba(68,208,219,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(106,54,206,1) 0%,rgba(68,208,219,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(106,54,206,1) 0%,rgba(68,208,219,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a36ce', endColorstr='#44d0db',GradientType=1 ); /* IE6-9 */
+    color: #fff;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.listItem > td {
+    padding: 5px;
+}
