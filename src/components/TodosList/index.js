@@ -16,7 +16,7 @@ class TodosList extends Component {
   render() {
     return(
       <table>
-        <TodosListHeader />
+
         <tbody>
           {this.renderItems()}
         </tbody>

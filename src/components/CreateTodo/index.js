@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import css from './styles.css'
+import createPlusIcon from '../../img/icon-plus.png'
 
 class CreateTodo extends Component {
   constructor(props) {
@@ -21,7 +23,9 @@ class CreateTodo extends Component {
     return(
       <form onSubmit={this.handleCreate.bind(this)}>
         <input type="text" placeholder="what to do" ref="createInput" />
-        <button>Create</button>
+        <button>
+            <img src={createPlusIcon} className="plusIcon" alt=""/>
+        </button>
         {this.renderError()}
       </form>
     )

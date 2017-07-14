@@ -25,9 +25,19 @@ button {
     background: linear-gradient(to right, rgba(106,54,206,1) 0%,rgba(68,208,219,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a36ce', endColorstr='#44d0db',GradientType=1 ); /* IE6-9 */
     color: #fff;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
+    display: flex;
+    border-radius: 3px;
+    justify-content: space-between;
+    width: 30vw;
+    height: 100px;
 }
 
 .listItem > td {
     padding: 5px;
+    width: 100%;
+}
+
+.actionCol {
+    text-align: right;
 }

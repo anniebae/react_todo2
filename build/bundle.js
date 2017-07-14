@@ -9825,6 +9825,43 @@ var App = function (_Component) {
         _react2.default.createElement(
           'div',
           null,
+          _react2.default.createElement(
+            'h3',
+            null,
+            'Went Well'
+          ),
+          _react2.default.createElement(_CreateTodo2.default, { todos: this.state.todos, createTask: this.createTask.bind(this) }),
+          _react2.default.createElement(_TodosList2.default, {
+            todos: this.state.todos,
+            toggleTask: this.toggleTask.bind(this),
+            saveTask: this.saveTask.bind(this),
+            deleteTask: this.deleteTask.bind(this)
+          })
+        ),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'h3',
+            null,
+            'To Improve'
+          ),
+          _react2.default.createElement(_CreateTodo2.default, { todos: this.state.todos, createTask: this.createTask.bind(this) }),
+          _react2.default.createElement(_TodosList2.default, {
+            todos: this.state.todos,
+            toggleTask: this.toggleTask.bind(this),
+            saveTask: this.saveTask.bind(this),
+            deleteTask: this.deleteTask.bind(this)
+          })
+        ),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'h3',
+            null,
+            'Action Items'
+          ),
           _react2.default.createElement(_CreateTodo2.default, { todos: this.state.todos, createTask: this.createTask.bind(this) }),
           _react2.default.createElement(_TodosList2.default, {
             todos: this.state.todos,
@@ -22524,6 +22561,14 @@ var _react = __webpack_require__(20);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _styles = __webpack_require__(205);
+
+var _styles2 = _interopRequireDefault(_styles);
+
+var _iconPlus = __webpack_require__(204);
+
+var _iconPlus2 = _interopRequireDefault(_iconPlus);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22568,7 +22613,7 @@ var CreateTodo = function (_Component) {
         _react2.default.createElement(
           'button',
           null,
-          'Create'
+          _react2.default.createElement('img', { src: _iconPlus2.default, className: 'plusIcon', alt: '' })
         ),
         this.renderError()
       );
@@ -22679,7 +22724,6 @@ var TodosList = function (_Component) {
       return _react2.default.createElement(
         'table',
         null,
-        _react2.default.createElement(_TodosListHeader2.default, null),
         _react2.default.createElement(
           'tbody',
           null,
@@ -40002,7 +40046,7 @@ var TodosListItem = function (_Component) {
       if (this.state.isEditing) {
         return _react2.default.createElement(
           'td',
-          null,
+          { className: 'actionCol' },
           _react2.default.createElement(
             'button',
             { onClick: this.onSaveClick.bind(this) },
@@ -40018,7 +40062,7 @@ var TodosListItem = function (_Component) {
 
       return _react2.default.createElement(
         'td',
-        null,
+        { className: 'actionCol' },
         _react2.default.createElement(
           'button',
           { onClick: this.onEditClick.bind(this) },
@@ -40108,7 +40152,7 @@ exports = module.exports = __webpack_require__(193)(undefined);
 
 
 // module
-exports.push([module.i, "button {\n    background: transparent;\n    border: none;\n}\n.listIcon {\n    width: 20px;\n    filter: invert(100%);\n\n}\n\n.inputItem {\n    border: none;\n    color: white;\n    font-size: 16px;\n    font-weight: 100;\n    width: 100%;\n    height: 25px;\n    background: rgba(255,255,255,0.5);\n}\n\n.listItem {\n    background: rgb(106,54,206); /* Old browsers */\n    background: -moz-linear-gradient(left, rgba(106,54,206,1) 0%, rgba(68,208,219,1) 100%); /* FF3.6-15 */\n    background: -webkit-linear-gradient(left, rgba(106,54,206,1) 0%,rgba(68,208,219,1) 100%); /* Chrome10-25,Safari5.1-6 */\n    background: linear-gradient(to right, rgba(106,54,206,1) 0%,rgba(68,208,219,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a36ce', endColorstr='#44d0db',GradientType=1 ); /* IE6-9 */\n    color: #fff;\n    margin-bottom: 3px;\n}\n\n.listItem > td {\n    padding: 5px;\n}", ""]);
+exports.push([module.i, "button {\n    background: transparent;\n    border: none;\n}\n.listIcon {\n    width: 20px;\n    filter: invert(100%);\n\n}\n\n.inputItem {\n    border: none;\n    color: white;\n    font-size: 16px;\n    font-weight: 100;\n    width: 100%;\n    height: 25px;\n    background: rgba(255,255,255,0.5);\n}\n\n.listItem {\n    background: rgb(106,54,206); /* Old browsers */\n    background: -moz-linear-gradient(left, rgba(106,54,206,1) 0%, rgba(68,208,219,1) 100%); /* FF3.6-15 */\n    background: -webkit-linear-gradient(left, rgba(106,54,206,1) 0%,rgba(68,208,219,1) 100%); /* Chrome10-25,Safari5.1-6 */\n    background: linear-gradient(to right, rgba(106,54,206,1) 0%,rgba(68,208,219,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\n    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a36ce', endColorstr='#44d0db',GradientType=1 ); /* IE6-9 */\n    color: #fff;\n    margin-bottom: 5px;\n    display: flex;\n    border-radius: 3px;\n    justify-content: space-between;\n    width: 30vw;\n    height: 100px;\n}\n\n.listItem > td {\n    padding: 5px;\n    width: 100%;\n}\n\n.actionCol {\n    text-align: right;\n}", ""]);
 
 // exports
 
@@ -40762,6 +40806,57 @@ module.exports = __webpack_require__.p + "a2a6f5fe021d5b682c0f629aeab7cc87.png";
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "c9424123a3a89827c6f93ff97dc3a541.png";
+
+/***/ }),
+/* 204 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "a0da3ef9e41def45172c456928e1493a.png";
+
+/***/ }),
+/* 205 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(206);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(194)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!./styles.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!./styles.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 206 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(193)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".plusIcon {\n    width: 15px;\n}", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);

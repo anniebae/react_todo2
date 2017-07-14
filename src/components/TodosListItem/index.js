@@ -46,7 +46,7 @@ class TodosListItem extends Component {
   renderActionSection() {
     if (this.state.isEditing) {
       return (
-        <td>
+        <td className="actionCol">
           <button onClick={this.onSaveClick.bind(this)}>
             <img src={saveIcon} className="listIcon" alt=""/>
           </button>
@@ -58,7 +58,7 @@ class TodosListItem extends Component {
     }
 
     return (
-        <td>
+        <td className="actionCol">
             <button onClick={this.onEditClick.bind(this)}>
                 <img src={editIcon} className="listIcon" alt=""/>
             </button>

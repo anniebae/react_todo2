@@ -30,7 +30,30 @@ class App extends Component {
     return(
       <div>
         <h1>Stashboard</h1>
-        <div>
+        <div>   
+            <h3>Went Well</h3>
+            <CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)} />
+            <TodosList 
+              todos={this.state.todos} 
+              toggleTask={this.toggleTask.bind(this)}
+              saveTask={this.saveTask.bind(this)}
+              deleteTask={this.deleteTask.bind(this)}
+            />
+        </div>
+
+        <div>   
+            <h3>To Improve</h3>
+            <CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)} />
+            <TodosList 
+              todos={this.state.todos} 
+              toggleTask={this.toggleTask.bind(this)}
+              saveTask={this.saveTask.bind(this)}
+              deleteTask={this.deleteTask.bind(this)}
+            />
+        </div>
+
+        <div>   
+            <h3>Action Items</h3>
             <CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)} />
             <TodosList 
               todos={this.state.todos} 
